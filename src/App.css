@@ -1,38 +1,67 @@
 .App {
   text-align: center;
+  font-display: flex;
+  height: 100%;
+  width: 100%;
+  padding: 16px;
+  display: flex;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.form{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-items: flex-start;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.form > *:not(:first-child){
+  margin-top: 16px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.values{
+  width: 100%;
+  min-height: 400px;
+  border-radius: 4px;
+  border: 1px solid #212529;
+  background-color: #edf2f4;
+  padding: 12px;
+}
+.resultContainer{
+  flex: 4;
+  padding: 12px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+} 
+
+.result{
+  margin-top: 12px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 210mm;
+  height: 297mm;
 }
 
-.App-link {
-  color: #61dafb;
+button {
+ padding: 8px;
+ font-weight: 700;
+ text-transform: uppercase;
+ background-color: #ee6c4d;
+ border-radius: 4px;
+ border: 0;
+ color: #edf2f4;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.qrcode-container{
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #212529;
+  padding: 12px;
+  margin: 4px;
+}
+
+.qrcode-label{
+  margin-bottom: 20px;
+  border-bottom: 1px solid #212529;
+  padding: 8px;
 }
